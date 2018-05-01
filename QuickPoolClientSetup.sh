@@ -36,17 +36,13 @@ sudo npm install -g yarn
 
 git clone https://github.com/nimiq-network/core
 
-nimiqDoD="--dumb"
+cd core 
+yarn
 
-#Generate Mining Runscript
-touch $nimiqScript
-chmod +x $nimiqScript
+#Setting up Mining Runscript
+wget -qO- 
 
-echo "cd core && git pull && yarn && yarn build" > $nimiqScript 
-
-echo "cd clients/nodejs/" >> $nimiqScript 
-
-echo "env UV_THREADPOOL_SIZE=$nimiqThreads node index.js $usePool --type=full --wallet-address=\"$nimiqAddress\" --miner=$nimiqThreads --statistics=10 $nimiqDoD --extra-data=\"$nimiqExtra\"" >> $nimiqScript
+chmod +x mine.sh
 
 (crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd /root; ./mine.sh"') | crontab -
 
