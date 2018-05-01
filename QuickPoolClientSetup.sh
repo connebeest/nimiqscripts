@@ -29,4 +29,4 @@ chmod +x mine.sh
 
 (crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd ~; ./mine.sh"') | crontab -
 
-screen -dmS nimiq bash -c "cd /root; ./mine.sh"
+screen -dmS nimiq bash -c "cd ~; ./mine.sh"
