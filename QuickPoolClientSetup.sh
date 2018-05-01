@@ -27,6 +27,6 @@ wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.
 
 chmod +x mine.sh
 
-(crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd /root; ./mine.sh"') | crontab -
+(crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd ~; ./mine.sh"') | crontab -
 
 screen -dmS nimiq bash -c "cd /root; ./mine.sh"
