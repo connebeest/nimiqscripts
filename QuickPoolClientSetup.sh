@@ -42,7 +42,7 @@ nimiqDoD="--dumb"
 touch $nimiqScript
 chmod +x $nimiqScript
 
-echo "cd core && git pull && yarn @@ yarn build" > $nimiqScript 
+echo "cd core && git pull && yarn && yarn build" > $nimiqScript 
 
 echo "cd clients/nodejs/" >> $nimiqScript 
 
