@@ -1,6 +1,8 @@
 #!/bin/bash
 # Easy Setup Script for NodeJS Nimiq Miner
 
+killall screen
+
 #Required Setup
 sudo apt-get update
 sudo apt-get -y upgrade
