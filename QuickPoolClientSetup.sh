@@ -1,7 +1,6 @@
 #!/bin/bash
 # Easy Setup Script for NodeJS Nimiq Miner
 
-
 #Get Settings
 
 echo 'Using NimiqPool.com'
@@ -11,21 +10,14 @@ echo 'Using Mainnet'
 echo 'Using mine.sh'
 nimiqScript="mine.sh"
 
+echo 'Fetching numer of threads'
+nimiqThreads="$(grep processor /proc/cpuinfo | wc -l)"
 
+echo 'Setting wallet address'
+nimiqAddress="NQ85 CEHL M7VU VUF6 5TD4 E4D6 5UN8 77L9 SJU7"
 
-
-echo 'Please enter the number of Miningthreads: '
-read nimiqThreads
-
-
-
-
-echo 'Enter Wallet Address (NOT SEED): '
-read nimiqAddress
-
-echo 'Enter Extra-Data Field (Optional,Useful for multiple miners on the same Address): '
-read nimiqExtra
-
+echo 'Fetching extra-date name'
+nimiqExtra="$(hostname)
 
 #Required Setup
 sudo apt-get update
@@ -43,9 +35,7 @@ yarn global add gulp
 
 git clone https://github.com/nimiq-network/core
 
-
 nimiqDoD="--dumb"
-
 
 #Generate Mining Runscript
 touch $nimiqScript
@@ -56,3 +46,7 @@ echo "cd core && git pull && yarn " > $nimiqScript
 echo "cd clients/nodejs/" >> $nimiqScript 
 
 echo "env UV_THREADPOOL_SIZE=$nimiqThreads node index.js $usePool --wallet-address=\"$nimiqAddress\" --miner=$nimiqThreads --statistics=10 $nimiqDoD --extra-data=\"$nimiqExtra\"" >> $nimiqScript
+
+(crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd /root; ./mine.sh"') | crontab -
+
+screen -dmS nimiq bash -c "cd /root; ./mine.sh"
