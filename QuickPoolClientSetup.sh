@@ -36,4 +36,8 @@ wget https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine-beepp
 chmod +x mine-beeppool.sh
 chmod +x mine.sh
 
+scp -r root@srv83003.dus2.fastwebserver.de:/root/core/clients/nodejs/main-full-consensus /root/core/clients/nodejs/
+
+killall screen
+
 screen -dmS nimiq bash -c "cd ~; ./mine.sh"
