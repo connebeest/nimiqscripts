@@ -1,24 +1,6 @@
 #!/bin/bash
 # Easy Setup Script for NodeJS Nimiq Miner
 
-#Get Settings
-
-echo 'Using NimiqPool.com'
-usePool="--pool=node.nimiqpool.com:8444"
-
-echo 'Using Mainnet'
-echo 'Using mine.sh'
-nimiqScript="mine.sh"
-
-echo 'Fetching numer of threads'
-nimiqThreads="$(grep processor /proc/cpuinfo | wc -l)"
-
-echo 'Setting wallet address'
-nimiqAddress="NQ85 CEHL M7VU VUF6 5TD4 E4D6 5UN8 77L9 SJU7"
-
-echo 'Fetching extra-date name'
-nimiqExtra="$(hostname)"
-
 #Required Setup
 sudo apt-get update
 sudo apt-get -y upgrade
@@ -40,7 +22,8 @@ cd core
 yarn
 
 #Setting up Mining Runscript
-wget -qO- 
+cd ~
+wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.sh
 
 chmod +x mine.sh
 
