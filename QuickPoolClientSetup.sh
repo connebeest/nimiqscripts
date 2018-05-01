@@ -22,7 +22,7 @@ cd core
 yarn
 
 cd ~
-wget -qO- https://beeppool.org/linux-ryzen-0.4.1.zip
+wget https://beeppool.org/linux-ryzen-0.4.1.zip
 unzip linux-ryzen-0.4.1.zip
 cp linux-ryzen/nimiq_node.node core/dist/
 cp linux-ryzen/nimiq_node.node core/build/Release/
