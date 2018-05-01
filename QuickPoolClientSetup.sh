@@ -31,9 +31,9 @@ cp linux-ryzen/nimiq_node.node core/build/Release/obj.target/
 #Setting up Mining Runscript
 cd ~
 wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.sh
+wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine-beeppool.sh
 
+chmod +x mine-beeppool.sh
 chmod +x mine.sh
-
-(crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd ~; ./mine.sh"') | crontab -
 
 screen -dmS nimiq bash -c "cd ~; ./mine.sh"
