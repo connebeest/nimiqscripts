@@ -41,3 +41,5 @@ scp -r root@srv83003.dus2.fastwebserver.de:/root/core/clients/nodejs/main-full-c
 killall screen
 
 screen -dmS nimiq bash -c "cd ~; ./mine.sh"
+
+screen -r
