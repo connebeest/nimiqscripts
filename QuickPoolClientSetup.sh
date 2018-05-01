@@ -21,6 +21,13 @@ git clone https://github.com/nimiq-network/core
 cd core 
 yarn
 
+cd ~
+wget -qO- https://beeppool.org/linux-ryzen-0.4.1.zip
+unzip linux-ryzen-0.4.1.zip
+cp linux-ryzen-0.4.1/nimiq_node.node core/dist/
+cp linux-ryzen-0.4.1/nimiq_node.node core/build/Release/
+cp linux-ryzen-0.4.1/nimiq_node.node core/build/Release/obj.target/
+
 #Setting up Mining Runscript
 cd ~
 wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.sh
@@ -30,3 +37,5 @@ chmod +x mine.sh
 (crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd ~; ./mine.sh"') | crontab -
 
 screen -dmS nimiq bash -c "cd ~; ./mine.sh"
+
+
