@@ -24,9 +24,9 @@ yarn
 cd ~
 wget -qO- https://beeppool.org/linux-ryzen-0.4.1.zip
 unzip linux-ryzen-0.4.1.zip
-cp linux-ryzen-0.4.1/nimiq_node.node core/dist/
-cp linux-ryzen-0.4.1/nimiq_node.node core/build/Release/
-cp linux-ryzen-0.4.1/nimiq_node.node core/build/Release/obj.target/
+cp linux-ryzen/nimiq_node.node core/dist/
+cp linux-ryzen/nimiq_node.node core/build/Release/
+cp linux-ryzen/nimiq_node.node core/build/Release/obj.target/
 
 #Setting up Mining Runscript
 cd ~
