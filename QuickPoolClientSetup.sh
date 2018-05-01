@@ -17,7 +17,7 @@ echo 'Setting wallet address'
 nimiqAddress="NQ85 CEHL M7VU VUF6 5TD4 E4D6 5UN8 77L9 SJU7"
 
 echo 'Fetching extra-date name'
-nimiqExtra="$(hostname)
+nimiqExtra="$(hostname)"
 
 #Required Setup
 sudo apt-get update
