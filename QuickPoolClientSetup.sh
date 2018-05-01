@@ -20,7 +20,6 @@ git clone https://github.com/nimiq-network/core
 
 cd core 
 yarn
-yarn build
 
 #Setting up Mining Runscript
 cd ~
