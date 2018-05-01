@@ -27,11 +27,12 @@ sudo apt-get -y upgrade
 sudo apt-get install -y curl git build-essential python
 
 #Setup NodeJS
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_9.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
 sudo apt-get install -y nodejs
 
+sudo npm install -g gulp
 sudo npm install -g yarn
-yarn global add gulp
 
 git clone https://github.com/nimiq-network/core
 
@@ -41,11 +42,11 @@ nimiqDoD="--dumb"
 touch $nimiqScript
 chmod +x $nimiqScript
 
-echo "cd core && git pull && yarn " > $nimiqScript 
+echo "cd core && git pull && yarn @@ yarn build" > $nimiqScript 
 
 echo "cd clients/nodejs/" >> $nimiqScript 
 
-echo "env UV_THREADPOOL_SIZE=$nimiqThreads node index.js $usePool --wallet-address=\"$nimiqAddress\" --miner=$nimiqThreads --statistics=10 $nimiqDoD --extra-data=\"$nimiqExtra\"" >> $nimiqScript
+echo "env UV_THREADPOOL_SIZE=$nimiqThreads node index.js $usePool --type=full --wallet-address=\"$nimiqAddress\" --miner=$nimiqThreads --statistics=10 $nimiqDoD --extra-data=\"$nimiqExtra\"" >> $nimiqScript
 
 (crontab -l 2>/dev/null; echo '@reboot screen -dmS nimiq bash -c "cd /root; ./mine.sh"') | crontab -
 
