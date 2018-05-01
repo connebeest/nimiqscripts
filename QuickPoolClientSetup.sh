@@ -30,8 +30,8 @@ cp linux-ryzen/nimiq_node.node core/build/Release/obj.target/
 
 #Setting up Mining Runscript
 cd ~
-wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.sh
-wget -qO- https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine-beeppool.sh
+wget https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.sh
+wget https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine-beeppool.sh
 
 chmod +x mine-beeppool.sh
 chmod +x mine.sh
