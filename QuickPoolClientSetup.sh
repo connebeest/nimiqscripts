@@ -42,6 +42,19 @@ scp -r root@srv83003.dus2.fastwebserver.de:/root/core/clients/nodejs/main-full-c
 
 killall screen
 
+#Chosing pool
+echo "1 for Nimiqpool, 2 for Beeppool: "
+read poolchoice
+
+if [ "$poolchoice" == "1" ]
+then
+echo "You chose Nimiqpool"
 screen -dmS nimiq bash -c "cd ~; ./mine.sh"
+fi
+if [ "$poolchoice" == "2" ]
+then
+ehco "You chose Beeppool"
+screen -dmS nimiq bash -c "cd ~; ./mine-beeppool.sh"
+fi
 
 screen -r
