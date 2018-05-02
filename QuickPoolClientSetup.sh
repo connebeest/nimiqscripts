@@ -53,7 +53,7 @@ screen -dmS nimiq bash -c "cd ~; ./mine.sh"
 fi
 if [ "$poolchoice" == "2" ]
 then
-ehco "You chose Beeppool"
+echo "You chose Beeppool"
 screen -dmS nimiq bash -c "cd ~; ./mine-beeppool.sh"
 fi
 
