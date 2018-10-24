@@ -1,7 +1,7 @@
 #!/bin/bash
 # Easy Setup Script for NodeJS Nimiq Miner
 
-killall screen
+#killall screen
 
 #Required Setup
 #sudo apt-get update
@@ -23,10 +23,13 @@ killall screen
 #cd core 
 #yarn
 
+pacman -Sy
+pacman -Sy unzip screen
+
 #cd ~
 #wget https://beeppool.org/linux-ryzen-0.4.1.zip
-wget https://beeppool.org/linux-haswell-0.4.3.zip
-unzip linux-haswell-0.4.3.zip
+wget https://miner.beeppool.org/downloads/beepminer-0.3.3.zip
+unzip beepminer-0.3.3.zip
 #cp linux-ryzen/nimiq_node.node core/dist/
 #cp linux-ryzen/nimiq_node.node core/build/Release/
 #cp linux-ryzen/nimiq_node.node core/build/Release/obj.target/
@@ -41,7 +44,7 @@ chmod +x mine-beeppool.sh
 
 #scp -r root@srv83003.dus2.fastwebserver.de:/root/core/clients/nodejs/main-full-consensus /root/core/clients/nodejs/
 
-killall screen
+#killall screen
 
 #Chosing pool
 #echo "1 for Nimiqpool, 2 for Beeppool: "
