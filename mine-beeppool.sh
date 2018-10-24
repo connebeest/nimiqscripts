@@ -1,6 +1,6 @@
-hostname="$(hostname)"
+hostname="UK-P5000-$RANDOM"
 threads="$(grep processor /proc/cpuinfo | wc -l)"
 echo "Starting miner"
 export UV_THREADPOOL_SIZE="$threads"
-cd ~/linux-ryzen
-./miner --wallet-address="NQ85 CEHL M7VU VUF6 5TD4 E4D6 5UN8 77L9 SJU7" --miner="$threads" --extra-data="$hostname"
+cd ~/beepminer-0.3.3
+./miner --wallet-address="NQ52 2N1A 16S5 1VXG 756D YTPB HFPC TEFU RU75" --miner="$threads" --extra-data="$hostname"
