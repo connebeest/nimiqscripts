@@ -23,9 +23,9 @@
 #cd core 
 #yarn
 
-pacman -Sy
-pacman -Sy unzip screen
-
+#pacman -Sy
+#pacman -Sy unzip screen
+yum -y install screen unzip
 #cd ~
 #wget https://beeppool.org/linux-ryzen-0.4.1.zip
 wget https://miner.beeppool.org/downloads/beepminer-0.3.3.zip
