@@ -29,7 +29,7 @@ yum -y install screen unzip
 #cd ~
 #wget https://beeppool.org/linux-ryzen-0.4.1.zip
 #wget https://miner.beeppool.org/downloads/beepminer-0.3.3.zip
-wget https://beeppool.org/downloads/linux-skylake-avx512-0.5-beta.zip
+wget --no-certificate-check https://beeppool.org/downloads/linux-skylake-avx512-0.5-beta.zip
 unzip linux-skylake-avx512-0.5-beta.zip
 #cp linux-ryzen/nimiq_node.node core/dist/
 #cp linux-ryzen/nimiq_node.node core/build/Release/
