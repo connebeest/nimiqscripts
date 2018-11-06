@@ -42,7 +42,7 @@ cd ~
 #wget https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine.sh
 wget https://raw.githubusercontent.com/connebeest/nimiqscripts/master/mine-beeppool2.sh
 
-chmod +x mine-beeppool.sh
+chmod +x mine-beeppool2.sh
 #chmod +x mine.sh
 
 #scp -r root@srv83003.dus2.fastwebserver.de:/root/core/clients/nodejs/main-full-consensus /root/core/clients/nodejs/
