@@ -3,8 +3,8 @@ mkdir NimiqMiner
 cd NimiqMiner
 wget https://github.com/tomkha/nq-miner/releases/download/0.99.7/nq-miner-linux-0.99.7.tar.gz
 mkdir nq-miner
-tar -xzvf nq-miner-linux-0.99.6.tar.gz -C nq-miner
-rm nq-miner-linux-0.99.6.tar.gz
+tar -xzvf nq-miner-linux-0.99.7.tar.gz -C nq-miner
+rm nq-miner-linux-0.99.7.tar.gz
 rm ./nq-miner/start_gpu.sh
 printf "clear \n #!/bin/bash \n echo \"------------------------START Miner----------------------\" \n ./nq-miner/nq-miner -t cuda -a \"NQ52 2N1A 16S5 1VXG 756D YTPB HFPC TEFU RU75\" -n \"NQ-Miner\" -p nimiq.icemining.ca:2053 \n echo \"------------------------END Miner----------------------\" \n echo \"Something went wrong or you exited\"" > start_gpu.sh
 chmod +x start_gpu.sh
